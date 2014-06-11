@@ -16,7 +16,6 @@ class PermissionReader{
       }   
     }   
     closedir($dh);
-
     return $filenames;  
   }
 
