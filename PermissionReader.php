@@ -7,7 +7,7 @@ class PermissionReader{
 
     $filenames = array();
     while(false !== ($fn = readdir($dh))){
-      $fullPath = $dir.'/'.$fn;
+      $fullPath = $dir . '/' . $fn;
       if($fn !== '.' && $fn !== '..' && !is_dir($fullPath)){
         array_push($filenames, $fullPath);
       }else if($fn !== '.' && $fn !== '..' && is_dir($fullPath)){
@@ -16,7 +16,6 @@ class PermissionReader{
       }   
     }   
     closedir($dh);
-
     return $filenames;  
   }
 
